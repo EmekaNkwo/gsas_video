@@ -6,10 +6,12 @@ const peer = new Peer();
 function FileTransfer() {
   const [socket, setSocket] = useState();
   const [roomId, setRoomId] = useState("");
-  const [joinRoomId, setJoinRoomId] = useState("");
+
   const [file, setFile] = useState(null);
   const [connectedPeers, setConnectedPeers] = useState([]);
   const socketConnect = io();
+
+  console.log(socket);
   useEffect(() => {
     setSocket(socketConnect);
 

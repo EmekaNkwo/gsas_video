@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Peer from "peerjs";
 import SimplePeer, { SignalData } from "simple-peer";
 

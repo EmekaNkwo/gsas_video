@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import io, { Socket } from "socket.io-client";
-
 import SimplePeer from "simple-peer";
-import { createPeer, socket } from "@/utils/peer";
+import { socket } from "@/utils/peer";
 import Video from "./Video";
 
 interface Message {
