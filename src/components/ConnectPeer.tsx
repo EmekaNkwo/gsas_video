@@ -59,6 +59,8 @@ const ConnectPeer: React.FC = () => {
     return peer;
   };
 
+  console.log(socket);
+
   useEffect(() => {
     socket.on("room-joined", ({ users }: { users: string[] }) => {
       setUsersApp(users);
