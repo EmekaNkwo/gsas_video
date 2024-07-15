@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import SimplePeer from "simple-peer";
-import { socket } from "@/utils/peer";
+
 import Video from "./Video";
+import { socket } from "@/utils/socket";
 
 interface Message {
   message: string;
@@ -13,8 +14,6 @@ interface StreamObj {
   userId: string;
   stream: MediaStream;
 }
-
-// const socket: Socket = io("http://localhost:5000");
 
 const ConnectPeer: React.FC = () => {
   const [roomId, setRoomId] = useState<string>("");
