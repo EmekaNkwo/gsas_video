@@ -1,6 +1,9 @@
 import { io } from "socket.io-client";
 
-const socket = io(`${process.env.NEXT_PUBLIC_BASE_URL as string}`);
+const socket = io(`${process.env.NEXT_PUBLIC_BASE_URL as string}`, {
+  path: "/ws",
+  withCredentials: true,
+});
 
 const socketConected = () => {
   socket.connect();
