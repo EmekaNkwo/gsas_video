@@ -10,7 +10,7 @@ export const sessionId = nanoid();
 // }));
 
 const socket = io(`${process.env.NEXT_PUBLIC_BASE_URL as string}`, {
-  // path: "",
+  path: "/ws",
   // withCredentials: !!process.env.NEXT_PUBLIC_BASE_URL,
 
   auth(cb) {
